@@ -11,6 +11,7 @@ import Paper from '@material-ui/core/Paper';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import FaceOutlinedIcon from '@material-ui/icons/FaceOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Parking_logo from '../../Images/parking_logo.jpg'
@@ -46,7 +47,7 @@ const useStyles = makeStyles(theme => ({
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.primary.main,
   },
   form: {
     width: '100%', // Fix IE 11 issue.
@@ -57,7 +58,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SignInSide() {
+export default function ForgotPassword() {
   const classes = useStyles();
 
   return (
@@ -68,10 +69,10 @@ export default function SignInSide() {
         <img src={Parking_logo}></img>
         <div className={classes.paper} style={{margin: '-55px 32px'}}>
           <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
+            <FaceOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            Recovery Password
           </Typography>
           <form className={classes.form} noValidate>
             <TextField
@@ -84,22 +85,7 @@ export default function SignInSide() {
               name="email"
               autoComplete="email"
               autoFocus
-            />
-            <TextField
-              variant="outlined"
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
+            />            
             <Button
               type="submit"
               fullWidth
@@ -107,11 +93,11 @@ export default function SignInSide() {
               color="primary"
               className={classes.submit}
             >
-              Sign In
+              Send mail
             </Button>
             <Grid container>
                 <Grid item xs>
-                  <Link_material component={Link} to="/forgot-password">
+                  <Link_material href="#" variant="body2">
                     Forgot password?
                   </Link_material>
                 </Grid>

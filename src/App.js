@@ -5,6 +5,7 @@ import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import AssignmentRoundedIcon from '@material-ui/icons/AssignmentRounded';
 import Login  from './App/LoginComponet/Login';
+import ForgotPassword  from './App/LoginComponet/Forgot-password';
 import { Register } from './App/RegisterComponent/Register';
 import { RegistroPar1 } from './App/RegisterComponent/RegistroPar1';
 import { RegistroParqueadero2 } from './App/RegisterComponent/RegistroParqueadero2';
@@ -33,6 +34,7 @@ class App extends Component {
               <Route path="/parqueadero" component={RegistroPar1View}/>
               <Route path="/parqueadero2" component={RegistroParqueadero2View}/>
               <Route path="/lista" component={listaView}/>
+              <Route path="/forgot-password" component={ForgotPasswordView}/>
           </div>
         </div>
       </Router>
@@ -44,6 +46,14 @@ class App extends Component {
 const LoginView = () => (
   <div>
       <Login />
+      <br/>
+      <br/>
+  </div>
+);
+
+const ForgotPasswordView = () => (
+  <div>
+      <ForgotPassword />
       <br/>
       <br/>
   </div>
