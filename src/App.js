@@ -12,6 +12,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import ListaP from './App/RegisterComponent/ListaP';
+import Mapa from './App/RegisterComponent/Mapa';
 
 class App extends Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class App extends Component {
               <BottomNavigationAction label="Register" icon={<AssignmentRoundedIcon />} component={Link} to="/todo" />
 			        <BottomNavigationAction label="Registro_Parqueadero" icon={<AssignmentRoundedIcon />} component={Link} to="/parqueadero" />
               <BottomNavigationAction label="Lista parqueaderos" icon={<AssignmentRoundedIcon />} component={Link} to="/lista" />
+              <BottomNavigationAction label="Mapa" icon={<AssignmentRoundedIcon />} component={Link} to="/mapaParqueaderos" />
           </BottomNavigation>
           <header className="App-header">
               <img src={logo} className="App-logo" alt="logo"/>
@@ -43,7 +45,7 @@ class App extends Component {
               <Route path="/parqueadero" component={RegistroPar1View}/>
               <Route path="/parqueadero2" component={RegistroParqueadero2View}/>
               <Route path="/lista" component={listaView}/>
-
+              <Route path="/mapaParqueaderos" component={MapaView}/>
           </div>
         </div>
       </Router>
@@ -79,6 +81,14 @@ const RegistroParqueadero2View = () => (
       <br/>
       <br/>
       <RegistroParqueadero2 />
+  </div>
+);
+
+const MapaView = () => (
+  <div>
+      <br/>
+      <br/>
+      <Mapa/>
   </div>
 );
 
