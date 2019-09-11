@@ -25,15 +25,11 @@ class App extends Component {
         <div className="App">
           <BottomNavigation showLabels className="">
               <BottomNavigationAction label="Login" icon={<LockOpenIcon />} component={Link} to="/" />
-              <BottomNavigationAction label="Register" icon={<AssignmentRoundedIcon />} component={Link} to="/todo" />
+              <BottomNavigationAction label="Register" icon={<AssignmentRoundedIcon />} component={Link} to="/register" />
           </BottomNavigation>
-          <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo"/>
-              <h1 className="App-title">HayParking</h1>
-          </header>
           <div>
               <Route exact path="/" component={LoginView}/>
-              <Route path="/todo" component={RegisterView}/>
+              <Route path="/register" component={RegisterView}/>
           </div>
         </div>
       </Router>
