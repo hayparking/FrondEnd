@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import AssignmentRoundedIcon from '@material-ui/icons/AssignmentRounded';
-import { Login } from './App/LoginComponet/Login';
+import Login  from './App/LoginComponet/Login';
 import { Register } from './App/RegisterComponent/Register';
 import logo from './logo.svg';
 import './App.css';
