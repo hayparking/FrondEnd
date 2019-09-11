@@ -13,6 +13,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import Parking_logo from '../../Images/parking_logo.jpg'
 
 function Copyright() {
   return (
@@ -64,8 +65,8 @@ export default function SignInSide() {
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-        <img src="../../../public/parking_logo.jpg" width="200"></img>
-        <div className={classes.paper}>
+        <img src={Parking_logo}></img>
+        <div className={classes.paper} style={{margin: '-55px 32px'}}>
           <Avatar className={classes.avatar}>
             <LockOutlinedIcon />
           </Avatar>
@@ -114,8 +115,8 @@ export default function SignInSide() {
                     Forgot password?
                   </Link_material>
                 </Grid>
-                <Grid item>
-                  <Link_material variant="body2" component={Link} to="/register">
+                <Grid item xs>
+                  <Link_material component={Link} to="/register" align="left">
                     {"Don't have an account? Sign Up"}
                   </Link_material>
                 </Grid>
