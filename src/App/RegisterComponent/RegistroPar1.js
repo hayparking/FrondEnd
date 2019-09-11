@@ -4,28 +4,33 @@ import './Register.css';
 import { CssBaseline, Paper, Avatar, Typography, Button, InputLabel, FormControl, Input } from '@material-ui/core';
 import FaceRoundedIcon from '@material-ui/icons/FaceRounded';
 import Switch from '@material-ui/core/Switch';
+import Select from '@material-ui/core/Select';	
+import MenuItem from '@material-ui/core/MenuItem';
 
 export class RegistroPar1 extends React.Component{
-    render(){
+
+	
+
+    render(){		
         return (
             <React.Fragment>
                 <CssBaseline />
                 <main className="layout">
-                    <Paper className="paper">
+                    <Paper className="paper" style={{margin: '0 auto', width:"20%"}}>
 												<Typography variant="headline">Registro Parqueadero</Typography>
-		                    <Avatar className="avatar">
+		                    <Avatar className="avatar" style={{margin: '0 auto'}}>
 		                        <FaceRoundedIcon />
 		                    </Avatar>
 		                    <Typography variant="headline">Informacion de Facturacion </Typography>
 		                    <form className="form">
 		                      	<FormControl margin="normal" required>
 																<label>Tipo de identificacion</label>
-																<select>
+																<Select>
 																  <option selected value="DEFAULT"></option>
 																  <option value="CC">CC</option>
 																  <option value="TI">TI</option>
 																  <option value="pasaporte">Pasaporte</option>
-																</select> 
+																</Select> 
 		                        </FormControl>
 														<br />
 														<FormControl margin="normal" required>
@@ -51,15 +56,14 @@ export class RegistroPar1 extends React.Component{
 		                        </FormControl>
 														<br />
 		                        <FormControl margin="normal" required>
-																<div >
-																		<InputLabel htmlFor="email">Direccion de correo</InputLabel>
-																		<Input id="email" name="email" autoComplete="email" autoFocus />
-																		<select>
-																			  <option selected value="DEFAULT"></option>
-																			  <option value="hotmail">@hotmail.com</option>
-																			  <option value="gmail">@gmail.com</option>
-																			  <option value="yahoo">@yahoo</option>
-																		</select>															
+																<div >																		
+																		<Input id="email" name="email" autoComplete="email" placeholder="email" autoFocus style={{width:'40%'}}/>
+																		<Select style={{width:'40%'}}>
+																			  <MenuItem value="DEFAULT"></MenuItem>
+																			  <MenuItem value="hotmail">@hotmail.com</MenuItem>
+																			  <MenuItem value="gmail">@gmail.com</MenuItem>
+																			  <MenuItem value="yahoo">@yahoo</MenuItem>
+																		</Select>															
 																</div>												
 														</FormControl>	
 														<br />										

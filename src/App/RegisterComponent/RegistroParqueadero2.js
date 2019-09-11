@@ -10,9 +10,9 @@ export class RegistroParqueadero2 extends React.Component{
             <React.Fragment>
                 <CssBaseline />
                 <main className="layout">
-                    <Paper className="paper">
+                    <Paper className="paper" style={{margin: '0 auto', width:"20%"}}>
 						<Typography variant="headline">Registro Parqueadero</Typography>
-                        <Avatar className="avatar">
+                        <Avatar className="avatar" style={{margin: '0 auto'}}>
                             <FaceRoundedIcon />
                         </Avatar>
                         <Typography variant="headline">Informacion del Dueño</Typography>

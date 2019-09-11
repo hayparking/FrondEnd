@@ -11,8 +11,8 @@ export class Register extends React.Component{
             <React.Fragment>
                 <CssBaseline />
                 <main className="layout">
-                    <Paper className="paper">
-                        <Avatar className="avatar">
+                    <Paper className="paper" style={{margin: '0 auto', width:"20%"}}>
+                        <Avatar className="avatar" style={{margin: '0 auto'}}>
                             <FaceRoundedIcon />
                         </Avatar>
                         <Typography variant="headline">Register</Typography>

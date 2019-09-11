@@ -13,6 +13,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import ListaP from './App/RegisterComponent/ListaP';
+import Mapa from './App/RegisterComponent/Mapa';
 
 class App extends Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class App extends Component {
               <Route path="/parqueadero2" component={RegistroParqueadero2View}/>
               <Route path="/lista" component={listaView}/>
               <Route path="/forgot-password" component={ForgotPasswordView}/>
+              <Route path="/mapaParqueaderos" component={MapaView}/>
           </div>
         </div>
       </Router>
@@ -78,6 +80,14 @@ const RegistroParqueadero2View = () => (
       <br/>
       <br/>
       <RegistroParqueadero2 />
+  </div>
+);
+
+const MapaView = () => (
+  <div>
+      <br/>
+      <br/>
+      <Mapa/>
   </div>
 );
 
