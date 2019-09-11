@@ -17,33 +17,39 @@ export class Register extends React.Component{
                         </Avatar>
                         <Typography variant="headline">Register</Typography>
                         <form className="form">
-                            <FormControl margin="normal" required fullWidth>
+                            <FormControl margin="normal" required >
                                 <InputLabel htmlFor="email">Name</InputLabel>
                                 <Input id="email" name="email" autoComplete="name" autoFocus />
                             </FormControl>
-                            <FormControl margin="normal" required fullWidth>
+                            <br/>
+                            <FormControl margin="normal" required>
                                 <InputLabel htmlFor="email">Last Name</InputLabel>
                                 <Input id="email" name="email" autoComplete="lastname" autoFocus />
                             </FormControl>
-                            <FormControl margin="normal" required fullWidth>
+                            <br/>                            
+                            <FormControl margin="normal" required>
                                 <InputLabel htmlFor="email">Email Address</InputLabel>
                                 <Input id="email" name="email" autoComplete="email" autoFocus />
                             </FormControl>
-                            <FormControl margin="normal" required fullWidth>
+                            <br/>                            
+                            <FormControl margin="normal" required>
                                 <InputLabel htmlFor="password">Password</InputLabel>
                                 <Input name="password" type="password" id="password" autoComplete="current-password" />
                             </FormControl>
-                            <FormControl margin="normal" required fullWidth>
+                            <br/>                            
+                            <FormControl margin="normal" required>
                                 <InputLabel htmlFor="password">Confirm Password</InputLabel>
                                 <Input name="password" type="password" id="password" autoComplete="current-password" />
                             </FormControl>
-
-                            <Button type="submit" fullWidth variant="raised" color="primary" className="submit">
+                            <br/>                            
+                            <Button type="submit" variant="raised" color="primary" className="submit">
                                 Sign Up
                             </Button>
                         </form>
-                        <Grid container>                            
-                            <Grid item>
+                        <br/>
+
+                        <Grid container align="center">                            
+                            <Grid item xs>
                               <Link variant="body2" component={Link} to="/">
                                 {"Sign in"}
                               </Link>
