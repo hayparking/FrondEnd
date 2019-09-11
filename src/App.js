@@ -22,11 +22,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
-          <BottomNavigation showLabels className="">
-              <BottomNavigationAction label="Login" icon={<LockOpenIcon />} component={Link} to="/" />
-              <BottomNavigationAction label="Register" icon={<AssignmentRoundedIcon />} component={Link} to="/register" />
-          </BottomNavigation>
+        <div className="App">          
           <div>
               <Route exact path="/" component={LoginView}/>
               <Route path="/register" component={RegisterView}/>

@@ -1,5 +1,7 @@
 import React from 'react';
 import './Register.css';
+import Grid from '@material-ui/core/Grid';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import { CssBaseline, Paper, Avatar, Typography, Button, InputLabel, FormControl, Input } from '@material-ui/core';
 import FaceRoundedIcon from '@material-ui/icons/FaceRounded';
 
@@ -40,6 +42,13 @@ export class Register extends React.Component{
                                 Sign Up
                             </Button>
                         </form>
+                        <Grid container>                            
+                            <Grid item>
+                              <Link variant="body2" component={Link} to="/">
+                                {"Sign in"}
+                              </Link>
+                            </Grid>
+                        </Grid>
                     </Paper>
                 </main>
             </React.Fragment>
