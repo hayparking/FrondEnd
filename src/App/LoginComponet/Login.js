@@ -121,6 +121,13 @@ export default function SignInSide() {
                   </Link_material>
                 </Grid>
             </Grid>
+            <Grid container>
+                <Grid item xs>
+                  <Link_material component={Link} to="/lista">
+                    See Parking
+                  </Link_material>
+                </Grid>                
+            </Grid>
             <Box mt={5}>
               <Copyright />
             </Box>

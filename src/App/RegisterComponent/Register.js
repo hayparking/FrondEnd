@@ -54,6 +54,11 @@ export class Register extends React.Component{
                                 {"Sign in"}
                               </Link>
                             </Grid>
+                            <Grid item xs>
+                              <Link variant="body2" component={Link} to="/parqueadero">
+                                {"Regyster Parking"}
+                              </Link>
+                            </Grid>
                         </Grid>
                     </Paper>
                 </main>
