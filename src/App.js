@@ -6,6 +6,8 @@ import LockOpenIcon from '@material-ui/icons/LockOpen';
 import AssignmentRoundedIcon from '@material-ui/icons/AssignmentRounded';
 import { Login } from './App/LoginComponet/Login';
 import { Register } from './App/RegisterComponent/Register';
+import { RegistroPar1 } from './App/RegisterComponent/RegistroPar1';
+import { RegistroParqueadero2 } from './App/RegisterComponent/RegistroParqueadero2';
 import logo from './logo.svg';
 import './App.css';
 
@@ -26,6 +28,7 @@ class App extends Component {
           <BottomNavigation showLabels className="">
               <BottomNavigationAction label="Login" icon={<LockOpenIcon />} component={Link} to="/" />
               <BottomNavigationAction label="Register" icon={<AssignmentRoundedIcon />} component={Link} to="/todo" />
+			  <BottomNavigationAction label="Registro_Parqueadero" icon={<AssignmentRoundedIcon />} component={Link} to="/parqueadero" />
           </BottomNavigation>
           <header className="App-header">
               <img src={logo} className="App-logo" alt="logo"/>
@@ -34,6 +37,8 @@ class App extends Component {
           <div>
               <Route exact path="/" component={LoginView}/>
               <Route path="/todo" component={RegisterView}/>
+			  <Route path="/parqueadero" component={RegistroPar1View}/>
+			  <Route path="/parqueadero2" component={RegistroParqueadero2View}/>
           </div>
         </div>
       </Router>
@@ -55,6 +60,20 @@ const RegisterView = () => (
       <br/>
       <br/>
       <Register />
+  </div>
+);
+const RegistroPar1View = () => (
+  <div>
+      <br/>
+      <br/>
+      <RegistroPar1 />
+  </div>
+);
+const RegistroParqueadero2View = () => (
+  <div>
+      <br/>
+      <br/>
+      <RegistroParqueadero2 />
   </div>
 );
 
