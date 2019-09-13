@@ -12,6 +12,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import ListaP from './App/RegisterComponent/ListaP';
+import Mapa from './App/RegisterComponent/Mapa';
 
 class App extends Component {
   constructor(props) {
@@ -26,13 +27,32 @@ class App extends Component {
   render() {
     return (
       <Router>
+<<<<<<< HEAD
         <div className="App">          
+=======
+        <div className="App">
+          <BottomNavigation showLabels className="">
+              <BottomNavigationAction label="Login" icon={<LockOpenIcon />} component={Link} to="/" />
+              <BottomNavigationAction label="Register" icon={<AssignmentRoundedIcon />} component={Link} to="/todo" />
+			        <BottomNavigationAction label="Registro_Parqueadero" icon={<AssignmentRoundedIcon />} component={Link} to="/parqueadero" />
+              <BottomNavigationAction label="Lista parqueaderos" icon={<AssignmentRoundedIcon />} component={Link} to="/lista" />
+              <BottomNavigationAction label="Mapa" icon={<AssignmentRoundedIcon />} component={Link} to="/mapaParqueaderos" />
+          </BottomNavigation>
+          <header className="App-header">
+              <img src={logo} className="App-logo" alt="logo"/>
+              <h1 className="App-title">HayParking</h1>
+          </header>
+>>>>>>> 45b1aa3bb305b926a29b8447aa687df7a36b7fb1
           <div>
               <Route exact path="/" component={LoginView}/>
               <Route path="/register" component={RegisterView}/>
               <Route path="/parqueadero" component={RegistroPar1View}/>
               <Route path="/parqueadero2" component={RegistroParqueadero2View}/>
               <Route path="/lista" component={listaView}/>
+<<<<<<< HEAD
+=======
+              <Route path="/mapaParqueaderos" component={MapaView}/>
+>>>>>>> 45b1aa3bb305b926a29b8447aa687df7a36b7fb1
           </div>
         </div>
       </Router>
@@ -68,6 +88,14 @@ const RegistroParqueadero2View = () => (
       <br/>
       <br/>
       <RegistroParqueadero2 />
+  </div>
+);
+
+const MapaView = () => (
+  <div>
+      <br/>
+      <br/>
+      <Mapa/>
   </div>
 );
 

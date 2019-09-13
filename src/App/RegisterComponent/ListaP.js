@@ -6,7 +6,7 @@ import { CssBaseline, Paper, Avatar, Typography, Button, InputLabel, FormControl
 class ListaP extends Component {
   render() {
     return(
-      <div div className="panel panel-primary">
+      <div className="panel panel-primary">
         <div class="panel panel-success">
           <div className="panel-heading">
             <h3 className="panel-title">Nombre:{this.props.Nombre}</h3>
