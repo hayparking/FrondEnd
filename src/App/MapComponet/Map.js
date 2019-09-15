@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { GoogleMaps, GoogleApiWrapper } from 'google-maps-react';
 
 const mapStyles = {
   width: '100%',
   height: '50%'
 };
 
-class Mapa extends Component {
+export class Map extends Component {
   render() {
     return(
       <div className="panel panel-primary">
@@ -27,7 +27,7 @@ class Mapa extends Component {
           </div>
           <br/>
           <div id="div">
-            <Map
+          <GoogleMaps
               google={this.props.google}
               zoom={14}
               style={mapStyles}
@@ -56,5 +56,3 @@ class Mapa extends Component {
 
 
 }
-
-export default Mapa;
