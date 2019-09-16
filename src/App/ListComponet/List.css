@@ -1,3 +1,8 @@
-.ContentCenter {
-    margin: 12px auto;
+.ListTitle {
+    font-size: 1.5cm;
+    margin-bottom: 25px;
+}
+
+.ListBackground {
+    background-color: chartreuse;
 }

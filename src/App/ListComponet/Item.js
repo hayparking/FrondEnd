@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card, CardContent, Typography, CardActions, Button } from '@material-ui/core';
+import './Item.css'
 
 export class Item extends React.Component {
   render() {
     return(
-      <Card>
+      <Card className="item">
         <CardContent>
           <Typography color="textSecondary" gutterBottom>
             {this.props.Nombre}

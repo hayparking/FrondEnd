@@ -36,46 +36,33 @@ class App extends Component {
 const LoginView = () => (
   <div>
     <Login />
-    <br/>
-    <br/>
   </div>
 );
 
 const RegisterView = () => (
   <div>
-    <br/>
-    <br/>
     <Register />
   </div>
 );
 const RegistroParqueaderoView = () => (
   <div>
-    <br/>
-    <br/>
     <RegisterParking />
   </div>
 );
 const RegistroParqueadero2View = () => (
   <div>
-    <br/>
-    <br/>
     <RegisterParking2 />
   </div>
 );
 
 const MapView = () => (
   <div>
-    <br/>
-    <br/>
     <Map />
   </div>
 );
 
 const ListView = () => (
   <div>
-    <h1 className="App-title">Lista de Parqueaderos </h1>
-    <br/>
-    <br/>
     <List />
   </div>
 );
