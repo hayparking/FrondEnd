@@ -1,0 +1,19 @@
+.GoogleMaps {
+    width: 100%;
+    height: 600px;
+}
+
+.MapTitle {
+    font-size: 1.5cm;
+    margin-bottom: 25px;
+    color: azure;
+}
+
+.MapBackground {
+    background-color: teal;
+}
+
+.MapFrom {
+    background-color: azure;
+    border-radius: 15px;
+}

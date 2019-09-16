@@ -1,7 +1,10 @@
 import React from 'react';
 import { Item } from './Item';
-import { Grid, CssBaseline } from '@material-ui/core';
+import { Grid, CssBaseline, Button } from '@material-ui/core';
 import './List.css';
+
+const home = '/';
+const Register = '/parqueadero';
 
 export class List extends React.Component {
     render () {
@@ -39,6 +42,21 @@ export class List extends React.Component {
                                 <Item Nombre="Parqueadero J.S.L." Direccion="Cra. 7 #41-45 " Cupos=" 9" />
                                 <Item Nombre="     " Direccion="calle " Cupos=" 1" />
                                 <Item Nombre="     " Direccion="calle " Cupos=" 8" />
+                                <br />
+                                <br />
+                                <Grid container>
+                                    <Grid item md={5}>
+                                        <Button type="submit" fullWidth variant="contained" className="submit" href={home}>
+                                            Atras
+                                        </Button>
+                                    </Grid>
+                                    <Grid item md={2}></Grid>
+                                    <Grid item md={5}>
+                                        <Button type="submit" fullWidth variant="contained" className="submit" href={Register}>
+                                            Registro Parqueadero
+                                        </Button>
+                                    </Grid>
+                                </Grid>
                             </Grid>
                             <Grid item sm={false} md={2}></Grid>
                         </Grid>

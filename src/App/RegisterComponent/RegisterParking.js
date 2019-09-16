@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Link} from 'react-router-dom';
 import './Register.css';
 import { CssBaseline, Paper, Avatar, Typography, Button, InputLabel, FormControl, Input, Grid, Select, MenuItem, FormControlLabel } from '@material-ui/core';
 import FaceRoundedIcon from '@material-ui/icons/FaceRounded';

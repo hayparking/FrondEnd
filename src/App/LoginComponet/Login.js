@@ -12,6 +12,7 @@ import Parking_logo from '../../Images/parking_logo.jpg';
 
 const register = '/register';
 const parking = '/listasParquederos';
+const map = '/mapa';
 
 export class Login extends React.Component {
   render() {
@@ -23,7 +24,7 @@ export class Login extends React.Component {
               <CssBaseline />
               <main className="layout">
                 <Paper className="paper">
-                  <img src={Parking_logo} />
+                  <img src={Parking_logo} alt="ParkingLogo"/>
                   <Avatar className="avatar">
                     <LockOutlinedIcon />
                   </Avatar>
@@ -39,7 +40,7 @@ export class Login extends React.Component {
                     </FormControl>
                     <br />
                     <br />
-                    <Button type="submit" fullWidth variant="contained" color="primary" className="submit">
+                    <Button type="submit" fullWidth variant="contained" color="primary" className="submit" href={map}>
                         Sign In
                     </Button>
 

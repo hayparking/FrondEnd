@@ -1,58 +1,122 @@
-import React, { Component } from 'react';
-import { GoogleMaps, GoogleApiWrapper } from 'google-maps-react';
+import React  from 'react';
+import { Grid, Button } from '@material-ui/core';
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import MomentUtils from '@date-io/moment';
+import moment from "moment";
+import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
+import './Map.css';
 
-const mapStyles = {
-  width: '100%',
-  height: '50%'
-};
+const mapInite = {
+  lat: -1.2884,
+  lng: 36.8233
+}
 
-export class Map extends Component {
+const ListMap = '/listasParquederos';
+
+export class Map extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state = { dueDate: moment() };
+    this.handleDateChange = this.handleDateChange.bind(this);
+  }
+
+  handleDateChange(date) {
+    this.setState({
+      dueDate: date
+    });
+  }
+
   render() {
     return(
-      <div className="panel panel-primary">
-        <div align="center">
-          <h1>HayParking</h1>
-        </div>
-
-          <div id="fechayhora">
-            <p>Fecha y hora:</p>
-              <input id="fecha" type="date" name="fecha" min="2018-03-25" max="2020-05-25" step="2"/>
-              <input id="hora" type="time" name="hora" min="02:00" max="21:00" step="900"/>
-              <br/>
+      <Grid container direction="column" className="MapBackground">
+        <Grid item lg={12}>
+          <div className="MapTitle">
+            Map
           </div>
-          <br/>
-          <div id="opciones" align="center">
-            <button>Lista Parqueaderos</button>
-            <button onClick={this.firstExample}> Reservar</button>
-          </div>
-          <br/>
-          <div id="div">
-          <GoogleMaps
-              google={this.props.google}
-              zoom={14}
-              style={mapStyles}
-              initialCenter={{
-               lat: -1.2884,
-               lng: 36.8233
-              }}
-            />
-          </div>
-          <div id="Map"></div>
-          <br/>
-          <br/>
-
-
-      </div>
+        </Grid>
+        <Grid item lg={12}>
+          <Grid container>
+            <Grid item md={2}></Grid>
+            <Grid item md={8} className="MapFrom">
+              <form noValidate autoComplete="off">
+                <br />
+                <br />
+                <Grid container>
+                  <Grid item md={2}></Grid>
+                  <Grid item md={4}>
+                    <MuiPickersUtilsProvider utils={MomentUtils}>
+                      <KeyboardDatePicker
+                        variant="inline"
+                        format="DD/MM/YYYY"
+                        margin="normal"
+                        id="date-picker-inline"
+                        label="Hora de llegada"
+                        value={this.state.dueDate}
+                        onChange={this.handleDateChange}
+                        KeyboardButtonProps={{
+                          'aria-label': 'change date',
+                        }}
+                      />
+                    </MuiPickersUtilsProvider>
+                  </Grid>
+                  <Grid item md={4}>
+                    <MuiPickersUtilsProvider utils={MomentUtils}>
+                      <KeyboardDatePicker
+                        variant="inline"
+                        format="DD/MM/YYYY"
+                        margin="normal"
+                        id="date-picker-inline"
+                        label="Hora de Salida"
+                        value={this.state.dueDate}
+                        onChange={this.handleDateChange}
+                        KeyboardButtonProps={{
+                          'aria-label': 'change date',
+                        }}
+                      />
+                    </MuiPickersUtilsProvider>
+                  </Grid>
+                  <Grid item md={2}></Grid>
+                </Grid>
+                <br />
+                <br />
+                <Grid container>
+                  <Grid item md={2}></Grid>
+                  <Grid item md={3}>
+                    <Button type="submit" fullWidth variant="contained" color="primary" className="submit" href={ListMap}>
+                      Lista Parqueaderos
+                    </Button>
+                  </Grid>
+                  <Grid item md={2}></Grid>
+                  <Grid item md={3}>
+                    <Button type="submit" fullWidth variant="contained" color="primary" className="submit" href={ListMap}>
+                      Reserva
+                    </Button>
+                  </Grid>
+                  <Grid item md={2}></Grid>
+                </Grid>
+                <br />
+                <br />
+              </form>
+            </Grid>
+            <Grid item md={2}></Grid>
+          </Grid>
+        </Grid>
+        <Grid item lg={12}>
+          <Grid container>
+            <Grid item md={2}></Grid>
+            <Grid item md={8}>
+              <LoadScript googleMapsApiKey="AIzaSyCkmakEp0uLRoiF2-tJKv8UtxB8yZ4ter0" region="CO">
+                <GoogleMap mapContainerClassName="GoogleMaps" center={mapInite} />
+              </LoadScript>
+            </Grid>
+            <Grid item md={2}></Grid>
+          </Grid>
+        </Grid>
+        <br />
+        <br />
+      </Grid>
     )
   };
-
-  firstExample(){
-  		  var left = (window.screen.width ) ;
-             var top = (window.screen.height ) ;
-  		  var newWindow = window.open('', '','width=212, height=257');
-  		  newWindow.document.write('<div align="center"><h3>Tipo de vehículo</h3><div><p>¿Qué tipo de vehículo vas a utilizar hoy?</p><input type="radio" name="transporte" value="1">Carro<br><input type="radio" name="transporte" value="2">Moto<br><input type="radio" name="transporte" value="3">Bicicleta</div><br><br><div><button onmouseover = window.close()>Reservar</button></div></div>');
-  };
-
-
 
 }

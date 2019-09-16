@@ -18,6 +18,7 @@ npm install @material-ui/core
 npm install @material-ui/icons
 npm i @material-ui/pickers
 npm i @date-io/moment moment
+npm i -S @react-google-maps/api
 ```
 
 ## Documentacion

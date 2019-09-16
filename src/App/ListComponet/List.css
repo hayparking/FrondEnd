@@ -1,8 +1,9 @@
 .ListTitle {
     font-size: 1.5cm;
     margin-bottom: 25px;
+    color: azure;
 }
 
 .ListBackground {
-    background-color: chartreuse;
+    background-color: teal;
 }
