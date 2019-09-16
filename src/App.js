@@ -3,21 +3,17 @@ import moment from 'moment';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Login }  from './App/LoginComponet/Login';
 import { Register } from './App/RegisterComponent/Register';
-import { RegistroPar1 } from './App/RegisterComponent/RegistroPar1';
-import { RegistroParqueadero2 } from './App/RegisterComponent/RegistroParqueadero2';
 import './App.css';
 
 import { List } from './App/ListComponet/List';
 import { Map } from "./App/MapComponet/Map";
+import { RegisterParking2 } from './App/RegisterComponent/RegisterParking2';
+import { RegisterParking } from './App/RegisterComponent/RegisterParking';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {items: [], text: '', priority: 0, dueDate: moment()};
-    //this.handleTextChange = this.handleTextChange.bind(this);
-    //this.handlePriorityChange = this.handlePriorityChange.bind(this);
-    //this.handleDateChange = this.handleDateChange.bind(this);
-    //this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   render() {
@@ -26,7 +22,7 @@ class App extends Component {
         <div className="App">          
           <Route exact path="/" component={LoginView}/>
           <Route path="/register" component={RegisterView}/>
-          <Route path="/parqueadero" component={RegistroPar1View}/>
+          <Route path="/parqueadero" component={RegistroParqueaderoView}/>
           <Route path="/parqueadero2" component={RegistroParqueadero2View}/>
           <Route path="/listasParquederos" component={ListView}/>
           <Route path="/mapa" component={MapView}/>
@@ -39,39 +35,39 @@ class App extends Component {
 
 const LoginView = () => (
   <div>
-      <Login />
-      <br/>
-      <br/>
+    <Login />
+    <br/>
+    <br/>
   </div>
 );
 
 const RegisterView = () => (
   <div>
-      <br/>
-      <br/>
-      <Register />
+    <br/>
+    <br/>
+    <Register />
   </div>
 );
-const RegistroPar1View = () => (
+const RegistroParqueaderoView = () => (
   <div>
-      <br/>
-      <br/>
-      <RegistroPar1 />
+    <br/>
+    <br/>
+    <RegisterParking />
   </div>
 );
 const RegistroParqueadero2View = () => (
   <div>
-      <br/>
-      <br/>
-      <RegistroParqueadero2 />
+    <br/>
+    <br/>
+    <RegisterParking2 />
   </div>
 );
 
 const MapView = () => (
   <div>
-      <br/>
-      <br/>
-      <Map />
+    <br/>
+    <br/>
+    <Map />
   </div>
 );
 

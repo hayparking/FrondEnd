@@ -19,7 +19,7 @@ export class Item extends React.Component {
         <CardActions>
           <Button size="small" color="primary">Reservar</Button>
         </CardActions>
-      </Card>    
+      </Card>
     )
   }
 }

@@ -37,7 +37,8 @@ export class Login extends React.Component {
                       <InputLabel htmlFor="password">Password</InputLabel>
                       <Input name="password" type="password" id="password" autoComplete="current-password" />
                     </FormControl>
-
+                    <br />
+                    <br />
                     <Button type="submit" fullWidth variant="contained" color="primary" className="submit">
                         Sign In
                     </Button>
