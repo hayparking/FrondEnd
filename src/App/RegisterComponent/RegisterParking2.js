@@ -4,6 +4,7 @@ import { CssBaseline, Paper, Avatar, Typography, Button, InputLabel, FormControl
 import FaceRoundedIcon from '@material-ui/icons/FaceRounded';
 
 const Register = '/parqueadero';
+const RegisterDirecction ='/direccion';
 
 export class RegisterParking2 extends React.Component{
     render(){
@@ -50,10 +51,14 @@ export class RegisterParking2 extends React.Component{
                                     </FormControl>
                                     <br />
 
-                                    <FormControl margin="normal" required fullWidth>
+                                    <Button type="submit" fullWidth color="primary" className="submit" href={Register}>
+                                                Direccion
+                    						</Button>
+
+                                    {/* <FormControl margin="normal" required fullWidth>
                                         <InputLabel htmlFor="address">Direccion</InputLabel>
                                         <Input id="address" name="address" autoComplete="direccion" autoFocus />
-                                    </FormControl>
+                                    </FormControl> */}
                                     <br />
                                     <br />
                                     <Grid container>
@@ -63,7 +68,7 @@ export class RegisterParking2 extends React.Component{
                     						</Button>
                                         </Grid>
                                         <Grid item md={6} >
-                                            <Button type="submit" fullWidth color="primary" className="submit">
+                                            <Button type="submit" fullWidth color="primary" className="submit" href={RegisterDirecction}>
                                                 Finalizar
 											</Button>
                                         </Grid>

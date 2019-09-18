@@ -9,6 +9,7 @@ import { List } from './App/ListComponet/List';
 import { Map } from "./App/MapComponet/Map";
 import { RegisterParking2 } from './App/RegisterComponent/RegisterParking2';
 import { RegisterParking } from './App/RegisterComponent/RegisterParking';
+import { RegisterDirection } from './App/RegisterComponent/RegisterDirection';
 
 class App extends Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class App extends Component {
           <Route path="/parqueadero2" component={RegistroParqueadero2View}/>
           <Route path="/listasParquederos" component={ListView}/>
           <Route path="/mapa" component={MapView}/>
+          <Route path="/direccion" component={DirectionView}/>
         </div>
       </Router>
     );
@@ -66,6 +68,13 @@ const ListView = () => (
     <List />
   </div>
 );
+
+const DirectionView = () => (
+  <div>
+    <RegisterDirection />
+  </div>
+);
+
 
 
 export default App;

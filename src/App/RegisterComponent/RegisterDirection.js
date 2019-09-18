@@ -24,7 +24,7 @@ export class RegisterDirection extends React.Component {
 			Letra2: "",
 			Orientacion: "",
 			Letra3: "",
-			orientacion2:""
+			Orientacion2:""
 		};
 		/*this.handleIdChange = this.handleIdChange.bind(this);
 		this.handleDomaiChange = this.handleDomaiChange.bind(this);*/
@@ -99,11 +99,11 @@ export class RegisterDirection extends React.Component {
                 		<CssBaseline />
 						<main className="layout">
 							<Paper className="paper">
-								<Typography variant="headline">Registro Parqueadero</Typography>
+								<Typography variant="headline">Registro direccion</Typography>
 								<Avatar className="avatar">
 									<FaceRoundedIcon />
 								</Avatar>
-								<Typography variant="headline">Informacion de Facturacion </Typography>
+								<Typography variant="headline"></Typography>
 								<form className="form">
 
 									<FormControl margin="normal" required fullWidth>
@@ -118,57 +118,98 @@ export class RegisterDirection extends React.Component {
 									<br />
 
 									<FormControl margin="normal" required fullWidth>
-										<InputLabel htmlFor="Tid">Avenida/Calle/Carrera/Transversal</InputLabel>
-										<Select value={this.state.Avenida} onChange={this.handleAvenidaChange} inputProps={{ name: 'type', id: 'Tid'}}>
-											<MenuItem value="80">80</MenuItem>
-											<MenuItem value="Boyaca">Boyaca</MenuItem>
-											<MenuItem value="AutoNorte">AutoNorte</MenuItem>
+										<InputLabel htmlFor="Numero1">Numero</InputLabel>
+										<Input id="Numero1" name="Numero1" autoComplete="Numero1" autoFocus />
+									</FormControl>
+
+									<br />
+
+									<FormControl margin="normal" required fullWidth>
+										<InputLabel htmlFor="Letra1Id">Letra</InputLabel>
+										<Select value={this.state.Letra1} onChange={this.handleLetra1Change} inputProps={{ name: 'type', id: 'Letra1Id'}}>
+											<MenuItem value="a">a</MenuItem>
+											<MenuItem value="b">b</MenuItem>
+											<MenuItem value="c">c</MenuItem>
 										</Select>
 									</FormControl>
 
 									<br />
 
 									<FormControl margin="normal" required fullWidth>
-										<InputLabel htmlFor="registerM">Registro Mercantil</InputLabel>
-										<Input id="mercantil" name="registerM" autoComplete="registerM" autoFocus />
+										<InputLabel htmlFor="bisId">Bis</InputLabel>
+										<Select value={this.state.Bis} onChange={this.handleBis1Change} inputProps={{ name: 'type', id: 'bisId'}}>
+											<MenuItem value="None"></MenuItem>
+											<MenuItem value="Bis">Bis</MenuItem>
+
+										</Select>
 									</FormControl>
+
 									<br />
 
 									<FormControl margin="normal" required fullWidth>
-										<InputLabel htmlFor="RSocial">Razon social</InputLabel>
-										<Input id="social" name="RSocial" autoComplete="RSocial" autoFocus />
+										<InputLabel htmlFor="Letra2Id">Letra</InputLabel>
+										<Select value={this.state.Letra2} onChange={this.handleLetra2Change} inputProps={{ name: 'type', id: 'Letra2Id'}}>
+											<MenuItem value="a">a</MenuItem>
+											<MenuItem value="b">b</MenuItem>
+											<MenuItem value="c">c</MenuItem>
+										</Select>
 									</FormControl>
-									
+
 									<br />
 
-									<FormControlLabel
-										label="Facturacion Electronica:"
-										labelPlacement="start"
-										control={
-											<Switch value="checkedA" />
-										}
-									/>
+									<FormControl margin="normal" required fullWidth>
+										<InputLabel htmlFor="Orientacion1Id">Este/Oeste</InputLabel>
+										<Select value={this.state.Orientacion} onChange={this.handleOrientacionChange} inputProps={{ name: 'type', id: 'Orientacion'}}>
+											<MenuItem value="Norte">Norte</MenuItem>
+											<MenuItem value="Sur">Sur</MenuItem>
+											<MenuItem value="Este">Este</MenuItem>
+											<MenuItem value="Oeste">Oeste</MenuItem>
+										</Select>
+									</FormControl>
+
 									<br />
-									<Grid container>
-										<Grid item md={6}>
-											<FormControl margin="normal" required fullWidth>
-												<InputLabel htmlFor="mail">Direccion de correo</InputLabel>
-												<Input id="mail" name="mail" autoComplete="mail" autoFocus />
-											</FormControl>
-										</Grid>
-										<Grid item md={6}>
-											<FormControl margin="normal" required fullWidth>
-												<InputLabel htmlFor="domain">@mail.com</InputLabel>
-												<Select value={this.state.Domain} onChange={this.handleDomaiChange} inputProps={{ name: 'domain', id: 'correo' }}>
-													<MenuItem value={"@hotmail.com"}>@hotmail.com</MenuItem>
-													<MenuItem value={"@gmail.com"}>@gmail.com</MenuItem>
-													<MenuItem value={"@yahoo.com"}>@yahoo.co</MenuItem>
-												</Select>
-											</FormControl>
-										</Grid>
-									</Grid>
+
+									<FormControl margin="normal" required fullWidth>
+										<InputLabel htmlFor="Numero2">Numero</InputLabel>
+										<Input id="Numero2" name="Numero2" autoComplete="Numero2" autoFocus />
+									</FormControl>
+
 									<br />
+
+									<FormControl margin="normal" required fullWidth>
+										<InputLabel htmlFor="Letra3Id">Letra</InputLabel>
+										<Select value={this.state.Letra3} onChange={this.handleLetra3Change} inputProps={{ name: 'type', id: 'Letra3'}}>
+											<MenuItem value="a">a</MenuItem>
+											<MenuItem value="b">b</MenuItem>
+											<MenuItem value="c">c</MenuItem>
+										</Select>
+									</FormControl>
+
 									<br />
+
+									<FormControl margin="normal" required fullWidth>
+										<InputLabel htmlFor="Numero3">Numero</InputLabel>
+										<Input id="Numero3" name="Numero3" autoComplete="Numero3" autoFocus />
+									</FormControl>
+
+									<br />
+
+									<FormControl margin="normal" required fullWidth>
+										<InputLabel htmlFor="rientacion2Id">Este/Oeste</InputLabel>
+										<Select value={this.state.Orientacion2} onChange={this.handlerientacion2Change} inputProps={{ name: 'type', id: 'rientacion2'}}>
+											<MenuItem value="Norte">Norte</MenuItem>
+											<MenuItem value="Sur">Sur</MenuItem>
+											<MenuItem value="Este">Este</MenuItem>
+											<MenuItem value="Oeste">Oeste</MenuItem>
+										</Select>
+									</FormControl>
+
+									<FormControl margin="normal" required fullWidth>
+										<InputLabel htmlFor="Observaciones">Observaciones</InputLabel>
+										<Input id="Observaciones" name="Observaciones" autoComplete="Observaciones" autoFocus />
+									</FormControl>
+									<br />
+
 									<Grid container>
 										<Grid item md={6} >
 											<Button type="submit" fullWidth color="primary" className="submit" href={home}>
@@ -176,8 +217,8 @@ export class RegisterDirection extends React.Component {
                     						</Button>
 										</Grid>
 										<Grid item md={6} >
-											<Button type="submit" fullWidth color="primary" className="submit" href={Register2}>
-												Siguiente
+											<Button type="submit" fullWidth color="primary" className="submit" O>
+												Enviar
 											</Button>
 										</Grid>
 									</Grid>
