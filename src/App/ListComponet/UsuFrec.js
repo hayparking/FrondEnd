@@ -1,12 +1,13 @@
 import React from 'react';
-import { Cliente } from './CLiente';
+import { Cliente } from './Cliente';
+import { Item } from './Item';
 import { Grid, CssBaseline, Button } from '@material-ui/core';
 import './List.css';
 
 const home = '/';
 const Register = '/parqueadero';
 
-export class List extends React.Component {
+export class UsuFrec extends React.Component {
     render () {
         return (
             <React.Fragment>
@@ -14,7 +15,7 @@ export class List extends React.Component {
                     <CssBaseline />
                     <Grid item lg={12}>
                         <div className="ListTitle">
-                            Lista de Parqueaderos
+                            Lista de Usuarios Frecuentes
                         </div>
                     </Grid>
                     <Grid item lg={12}>
@@ -55,5 +56,5 @@ export class List extends React.Component {
                 </Grid>
             </React.Fragment>
         );
-    }; 
+    };
 }

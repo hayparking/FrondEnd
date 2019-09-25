@@ -8,6 +8,8 @@
     "@material-ui/icons": "^4.4.1",
     "@material-ui/pickers": "^3.2.5",
     "@react-google-maps/api": "^1.7.5",
+    "@types/date-fns": "^2.6.0",
+    "date-fns": "^2.3.0",
     "google-maps-react": "^2.0.2",
     "moment": "^2.24.0",
     "react": "^16.9.0",

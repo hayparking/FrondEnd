@@ -3,7 +3,13 @@ import { Grid, Button } from '@material-ui/core';
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import MomentUtils from '@date-io/moment';
 import moment from "moment";
-import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers';
+//import * as startOfDay from "date-fns";
+
+import {
+  MuiPickersUtilsProvider,
+  KeyboardTimePicker,
+  KeyboardDatePicker,
+} from '@material-ui/pickers';
 import './Map.css';
 
 const mapInite = {
@@ -13,12 +19,18 @@ const mapInite = {
 
 const ListMap = '/listasParquederos';
 
+//const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
+//const handleDateChange = date => {
+//    this.setSelectedDate(date);
+//  };
+
 export class Map extends React.Component {
 
   constructor(props){
     super(props);
-    this.state = { dueDate: moment() };
+    this.state = { dueDate: moment(), selectedDate: Date('2014-08-18T21:11:54')};
     this.handleDateChange = this.handleDateChange.bind(this);
+    this.handleHourChange = this.handleHourChange.bind(this);
   }
 
   handleDateChange(date) {
@@ -26,6 +38,13 @@ export class Map extends React.Component {
       dueDate: date
     });
   }
+
+  handleHourChange(date) {
+    this.setState({
+      selectedDate: date
+    });
+  }
+
 
   render() {
     return(
@@ -36,7 +55,10 @@ export class Map extends React.Component {
           </div>
         </Grid>
         <Grid item lg={12}>
-          <Grid container>
+          <Grid container
+            alignItems="center"
+            justify="center"
+          >
             <Grid item md={2}></Grid>
             <Grid item md={8} className="MapFrom">
               <form noValidate autoComplete="off">
@@ -51,7 +73,7 @@ export class Map extends React.Component {
                         format="DD/MM/YYYY"
                         margin="normal"
                         id="date-picker-inline"
-                        label="Hora de llegada"
+                        label="Fecha reserva"
                         value={this.state.dueDate}
                         onChange={this.handleDateChange}
                         KeyboardButtonProps={{
@@ -60,18 +82,21 @@ export class Map extends React.Component {
                       />
                     </MuiPickersUtilsProvider>
                   </Grid>
-                  <Grid item md={4}>
+                  <Grid item md={4}
+                  spacing={0}
+                  direction="column"
+                  alignItems="center"
+                  justify="center"
+                  >
                     <MuiPickersUtilsProvider utils={MomentUtils}>
-                      <KeyboardDatePicker
-                        variant="inline"
-                        format="DD/MM/YYYY"
+                      <KeyboardTimePicker
                         margin="normal"
-                        id="date-picker-inline"
-                        label="Hora de Salida"
-                        value={this.state.dueDate}
-                        onChange={this.handleDateChange}
+                        id="time-picker"
+                        label="Hora Estimada"
+                        value={this.state.selectedDate}
+                        onChange={this.handleHourChange}
                         KeyboardButtonProps={{
-                          'aria-label': 'change date',
+                          'aria-label': 'change time',
                         }}
                       />
                     </MuiPickersUtilsProvider>
@@ -80,13 +105,17 @@ export class Map extends React.Component {
                 </Grid>
                 <br />
                 <br />
-                <Grid container>
+                <Grid container
+                  alignItems="center"
+                  justify="center"
+                >
                   <Grid item md={2}></Grid>
                   <Grid item md={3}>
                     <Button type="submit" fullWidth variant="contained" color="primary" className="submit" href={ListMap}>
                       Lista Parqueaderos
                     </Button>
                   </Grid>
+                  <br />
                   <Grid item md={2}></Grid>
                   <Grid item md={3}>
                     <Button type="submit" fullWidth variant="contained" color="primary" className="submit" href={ListMap}>
