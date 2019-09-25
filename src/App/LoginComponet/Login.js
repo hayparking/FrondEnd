@@ -13,6 +13,7 @@ import Parking_logo from '../../Images/parking_logo.jpg';
 const register = '/register';
 const parking = '/listasParquederos';
 const map = '/mapa';
+const menuadmin = '/usuariosFrec';
 
 export class Login extends React.Component {
   render() {
@@ -52,17 +53,25 @@ export class Login extends React.Component {
                         </Link>
                       </Grid>
                       <Grid item xs={6}>
-                        <Link href={register} variant="link2">
-                          Don't have an account? Sign Up
+                        <Link href={menuadmin} variant="link2">
+                          Ingresar como admin
                         </Link>
                       </Grid>
                     </Grid>
-                    <Grid item xs={12}><br/></Grid>
-                    <Grid item xs={12}>
+                    <Grid container spacing={4}>
+
+                    <Grid item xs={6}>
                       <Link href={parking} variant="link3">
                         See Parking
                       </Link>
                     </Grid>
+                    <Grid item xs={6}>
+                      <Link href={register} variant="link4">
+                        Don't have an account? Sign Up
+                      </Link>
+                    </Grid>
+                    </Grid>
+
                   </form>
                 </Paper>
               </main>

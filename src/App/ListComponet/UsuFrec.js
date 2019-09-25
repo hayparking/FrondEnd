@@ -1,6 +1,6 @@
 import React from 'react';
 import { Cliente } from './Cliente';
-import { Item } from './Item';
+import { ItemUsuFrec } from './ItemUsuFrec';
 import { Grid, CssBaseline, Button } from '@material-ui/core';
 import './List.css';
 
@@ -23,16 +23,16 @@ export class UsuFrec extends React.Component {
                             <Grid item sm={false} md={2}></Grid>
                             <Grid item sm={12} md={8}>
 
-                                <Item Nombre="Juan" NumReservas=" 7" />
-                                <Item Nombre="Juanito" NumReservas=" 7" />
-                                <Item Nombre="Juanita" NumReservas=" 7" />
-                                <Item Nombre="Julian" NumReservas=" 9" />
-                                <Item Nombre="Felipe" NumReservas=" 4" />
-                                <Item Nombre="Nicolas" NumReservas=" 7" />
-                                <Item Nombre="Diego" NumReservas=" 3" />
-                                <Item Nombre="Estevan" NumReservas=" 2" />
-                                <Item Nombre="Mateo" NumReservas=" 1" />
-                                <Item Nombre="ALejandra" NumReservas=" 17" />
+                                <ItemUsuFrec Nombre="Juan" NumReservas=" 7" />
+                                <ItemUsuFrec Nombre="Juanito" NumReservas=" 7" />
+                                <ItemUsuFrec Nombre="Juanita" NumReservas=" 7" />
+                                <ItemUsuFrec Nombre="Julian" NumReservas=" 9" />
+                                <ItemUsuFrec Nombre="Felipe" NumReservas=" 4" />
+                                <ItemUsuFrec Nombre="Nicolas" NumReservas=" 7" />
+                                <ItemUsuFrec Nombre="Diego" NumReservas=" 3" />
+                                <ItemUsuFrec Nombre="Estevan" NumReservas=" 2" />
+                                <ItemUsuFrec Nombre="Mateo" NumReservas=" 1" />
+                                <ItemUsuFrec Nombre="ALejandra" NumReservas=" 17" />
 
                                 <br />
                                 <br />
