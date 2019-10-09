@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, Typography, CardActions, Button } from '@material-ui/core';
 import './Item.css'
 
+const Reservar = '/Reservar';
 export class Item extends React.Component {
   render() {
     return(
@@ -18,7 +19,9 @@ export class Item extends React.Component {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small" color="primary">Reservar</Button>
+          <Button size="small" color="primary" href={Reservar}>Reservar</Button>
+
+
         </CardActions>
       </Card>
     )
