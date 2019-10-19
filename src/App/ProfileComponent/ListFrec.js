@@ -2,14 +2,11 @@ import React from 'react';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Title from './Title';
-
-
 
 export default function ListFrec() {
   return (
     <React.Fragment>
-      <Title>Parqueaderos Frecuentes</Title>
+      <Typography variant="h3">Parqueaderos Frecuentes</Typography>
       <Typography component="p" variant="h7">
                   NOMBRE......................................DIRECCIÓN<br/>
         Parqueadero - Parque Simón Bolivar-------------Direccion Cra. 59 #56-15<br/>
