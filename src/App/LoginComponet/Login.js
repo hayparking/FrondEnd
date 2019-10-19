@@ -14,6 +14,7 @@ const register = '/register';
 const parking = '/listasParquederos';
 const map = '/mapa';
 const menuadmin = '/usuariosFrec';
+const profile='/profile';
 
 export class Login extends React.Component {
   render() {
@@ -68,6 +69,12 @@ export class Login extends React.Component {
                     <Grid item xs={6}>
                       <Link href={register} variant="link4">
                         Don't have an account? Sign Up
+                      </Link>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <Link href={profile} variant="link4">
+                        PERFIL
                       </Link>
                     </Grid>
                     </Grid>
