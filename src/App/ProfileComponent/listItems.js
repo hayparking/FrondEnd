@@ -10,9 +10,12 @@ import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
-
+//import { Link } from "react-router-dom";
+//<ListItem button component={Link} to="/design">
 
 const map = '/mapa';
+const singIn = '/';
+const parking = '/parqueadero';
 
 export const mainListItems = (
   <div>
@@ -37,18 +40,18 @@ export const mainListItems = (
       <ListItemText primary="Cupos" />
     </ListItem>
 
-    <ListItem button>
+    <ListItem button component="a" href="reservar">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Reservar" />
     </ListItem>
 
-    <ListItem button>
+    <ListItem button component="a" href="mapa">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Mapa" />
+      <ListItemText primary="Mapa " />
       </ListItem>
   </div>
 );
