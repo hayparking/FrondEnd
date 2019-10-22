@@ -18,6 +18,7 @@ const mapInite = {
 }
 
 const ListMap = '/listasParquederos';
+const profile = '/Profile';
 
 //const [selectedDate, setSelectedDate] = React.useState(new Date('2014-08-18T21:11:54'));
 //const handleDateChange = date => {
@@ -110,11 +111,13 @@ export class Map extends React.Component {
                   justify="center"
                 >
                   <Grid item md={2}></Grid>
+                  {/*
                   <Grid item md={3}>
-                    <Button type="submit" fullWidth variant="contained" color="primary" className="submit" href={ListMap}>
+                    <Button type="submit" fullWidth variant="contained" color="primary" className="submit" href={}>
                       Lista Parqueaderos
                     </Button>
                   </Grid>
+                  */}
                   <br />
                   <Grid item md={2}></Grid>
                   <Grid item md={3}>
@@ -123,6 +126,13 @@ export class Map extends React.Component {
                     </Button>
                   </Grid>
                   <Grid item md={2}></Grid>
+
+                  <Grid item md={3}>
+                    <Button type="submit" fullWidth variant="contained" color="primary" className="submit" href={profile}>
+                      Finalizar viaje
+                    </Button>
+                  </Grid>
+
                 </Grid>
                 <br />
                 <br />

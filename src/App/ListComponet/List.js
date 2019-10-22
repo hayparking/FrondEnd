@@ -5,6 +5,8 @@ import './List.css';
 
 const home = '/';
 const Register = '/parqueadero';
+const buscarCupo = '/BuscarCupo';
+const map = '/mapa';
 
 export class List extends React.Component {
     render () {
@@ -46,14 +48,14 @@ export class List extends React.Component {
                                 <br />
                                 <Grid container>
                                     <Grid item md={5}>
-                                        <Button type="submit" fullWidth variant="contained" className="submit" href={home}>
+                                        <Button type="submit" fullWidth variant="contained" className="submit" href={buscarCupo}>
                                             Atras
                                         </Button>
                                     </Grid>
                                     <Grid item md={2}></Grid>
                                     <Grid item md={5}>
-                                        <Button type="submit" fullWidth variant="contained" className="submit" href={Register}>
-                                            Registro Parqueadero
+                                        <Button type="submit" fullWidth variant="contained" className="submit" href={map}>
+                                            Aceptar
                                         </Button>
                                     </Grid>
                                 </Grid>
@@ -64,5 +66,5 @@ export class List extends React.Component {
                 </Grid>
             </React.Fragment>
         );
-    }; 
+    };
 }

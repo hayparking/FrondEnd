@@ -16,6 +16,7 @@ const map = '/mapa';
 const menuadmin = '/usuariosFrec';
 const profile='/profile';
 
+
 export class Login extends React.Component {
   render() {
     return (
@@ -42,7 +43,7 @@ export class Login extends React.Component {
                     </FormControl>
                     <br />
                     <br />
-                    <Button type="submit" fullWidth variant="contained" color="primary" className="submit" href={map}>
+                    <Button type="submit" fullWidth variant="contained" color="primary" className="submit" href={profile}>
                         Sign In
                     </Button>
 

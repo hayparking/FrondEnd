@@ -16,35 +16,36 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 const map = '/mapa';
 const singIn = '/';
 const parking = '/parqueadero';
+const edit='/ProfileEdit'
 
 export const mainListItems = (
   <div>
-    <ListItem button>
+    <ListItem button component="a" href="ProfileEdit">
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
-      <ListItemText primary="Perfil" />
+      <ListItemText primary="Editar Perfil" />
     </ListItem>
 
-    <ListItem button>
+    <ListItem button component="a" href="HistorialRutas">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Rutas Frecuentes" />
     </ListItem>
 
-    <ListItem button>
+    <ListItem button component="a" href="Promociones">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Cupos" />
+      <ListItemText primary="Promociones" />
     </ListItem>
 
-    <ListItem button component="a" href="reservar">
+    <ListItem button component="a" href="BuscarCupo">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Reservar" />
+      <ListItemText primary="Encuentra tu cupo" />
     </ListItem>
 
     <ListItem button component="a" href="mapa">

@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, Typography, CardActions, Button } from '@material-ui/core';
 import './Item.css'
 
-const Reservar = '/Reservar';
+const Reservar = '';
 export class Item extends React.Component {
   render() {
     return(

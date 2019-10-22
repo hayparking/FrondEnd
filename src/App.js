@@ -11,8 +11,11 @@ import { RegisterParking2 } from './App/RegisterComponent/RegisterParking2';
 import { RegisterParking } from './App/RegisterComponent/RegisterParking';
 import { RegisterDirection } from './App/RegisterComponent/RegisterDirection';
 import { UsuFrec } from './App/ListComponet/UsuFrec';
-import { Reservar } from './App/ListComponet/Reservar';
+import { BuscarCupo } from './App/ListComponet/BuscarCupo';
 import Profile from './App/ProfileComponent/Profile';
+import {ProfileEdit} from './App/ProfileComponent/ProfileEdit';
+import {HistorialRutas} from './App/ProfileComponent/HistorialRutas';
+import {Promociones} from './App/ProfileComponent/Promociones';
 
 class App extends Component {
   constructor(props) {
@@ -32,8 +35,11 @@ class App extends Component {
           <Route path="/mapa" component={MapView}/>
           <Route path="/direccion" component={DirectionView}/>
           <Route path="/usuariosFrec" component={ListUsuFrec}/>
-          <Route path="/reservar" component={ReservaView}/>
+          <Route path="/BuscarCupo" component={BuscarCupoView}/>
           <Route path="/profile" component={ProfileView}/>
+          <Route path="/ProfileEdit" component={ProfileEditView}/>
+          <Route path="/HistorialRutas" component={HistorialRutasView}/>
+          <Route path="/Promociones" component={PromocionesView}/>
         </div>
       </Router>
     );
@@ -88,9 +94,9 @@ const ListUsuFrec = () => (
 );
 
 
-const ReservaView = () => (
+const BuscarCupoView = () => (
   <div>
-    <Reservar />
+    <BuscarCupo />
   </div>
 );
 
@@ -100,5 +106,22 @@ const ProfileView = () => (
   </div>
 );
 
+const ProfileEditView = () => (
+  <div>
+    <ProfileEdit />
+  </div>
+);
+
+const HistorialRutasView = () => (
+  <div>
+    <HistorialRutas />
+  </div>
+);
+
+const PromocionesView = () => (
+  <div>
+    <Promociones />
+  </div>
+);
 
 export default App;
