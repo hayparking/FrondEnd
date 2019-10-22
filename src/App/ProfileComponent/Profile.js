@@ -18,11 +18,13 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
+import Button from '@material-ui/core/Button';
 
 import Puntos from './Puntos';
 import ListFrec from './ListFrec';
 import LugaresFrec from './LugaresFrec';
 
+const home = '/';
 
 
 function Copyright() {
@@ -147,6 +149,7 @@ export default function Profile() {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Perfil Usuario
           </Typography>
+          <Button className={classes.button} href={home}>Log Out</Button>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />

@@ -68,10 +68,6 @@ export class BuscarCupo extends React.Component {
                             </Button>
                         </Grid>
                     </Grid>
-
-
-
-
                   </form>
                   </Grid>
               </Grid>

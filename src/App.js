@@ -14,8 +14,9 @@ import { UsuFrec } from './App/ListComponet/UsuFrec';
 import { BuscarCupo } from './App/ListComponet/BuscarCupo';
 import Profile from './App/ProfileComponent/Profile';
 import {ProfileEdit} from './App/ProfileComponent/ProfileEdit';
-import {HistorialRutas} from './App/ProfileComponent/HistorialRutas';
+import HistorialRutas from './App/ProfileComponent/HistorialRutas';
 import {Promociones} from './App/ProfileComponent/Promociones';
+import {Soporte} from './App/ProfileComponent/Soporte';
 
 class App extends Component {
   constructor(props) {
@@ -40,6 +41,7 @@ class App extends Component {
           <Route path="/ProfileEdit" component={ProfileEditView}/>
           <Route path="/HistorialRutas" component={HistorialRutasView}/>
           <Route path="/Promociones" component={PromocionesView}/>
+          <Route path="/Soporte" component={SoporteView}/>
         </div>
       </Router>
     );
@@ -124,4 +126,9 @@ const PromocionesView = () => (
   </div>
 );
 
+const SoporteView = () => (
+  <div>
+    <Soporte />
+  </div>
+);
 export default App;
