@@ -9,6 +9,8 @@ import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import {Link} from "react-router-dom";
+import Link_material from "@material-ui/core/Link/Link";
 
 //import { Link } from "react-router-dom";
 //<ListItem button component={Link} to="/design">
@@ -20,35 +22,35 @@ const edit='/ProfileEdit'
 
 export const mainListItems = (
   <div>
-    <ListItem button component="a" href="ProfileEdit">
+    <ListItem button component="a" component={Link} to="ProfileEdit">
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
       <ListItemText primary="Editar Perfil" />
     </ListItem>
 
-    <ListItem button component="a" href="HistorialRutas">
+    <ListItem button component="a" component={Link} to="HistorialRutas">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Historial de Rutas" />
     </ListItem>
 
-    <ListItem button component="a" href="Promociones">
+    <ListItem button component="a" component={Link} to="Promociones">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Promociones" />
     </ListItem>
 
-    <ListItem button component="a" href="BuscarCupo">
+    <ListItem button component="a" component={Link} to="BuscarCupo">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Encuentra tu cupo" />
     </ListItem>
 
-    <ListItem button component="a" href="mapa">
+    <ListItem button component="a" component={Link} to="mapa">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
@@ -59,13 +61,13 @@ export const mainListItems = (
 
 export const secondaryListItems = (
   <div>
-    <ListItem button component="a" href="Soporte">
+    <ListItem button component="a" component={Link} to="Soporte">
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
       <ListItemText primary="Soporte" />
     </ListItem>
-    <ListItem button component="a" href="/">
+    <ListItem button component="a" component={Link} to="/">
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>

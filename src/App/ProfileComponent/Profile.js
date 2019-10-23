@@ -13,7 +13,7 @@ import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Link from '@material-ui/core/Link';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
@@ -23,6 +23,7 @@ import Button from '@material-ui/core/Button';
 import Puntos from './Puntos';
 import ListFrec from './ListFrec';
 import LugaresFrec from './LugaresFrec';
+import Link_material from "@material-ui/core/Link/Link";
 
 const home = '/';
 
@@ -31,7 +32,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link color="inherit" href="/">
         Your Website
       </Link>{' '}
       {new Date().getFullYear()}
@@ -149,7 +150,7 @@ export default function Profile() {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Perfil Usuario
           </Typography>
-          <Button className={classes.button} href={home}>Log Out</Button>
+          <Button className={classes.button} component={Link} to="/" >Log Out</Button>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />

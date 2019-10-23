@@ -46,7 +46,7 @@ export class Login extends React.Component {
                     </FormControl>
                     <br />
                     <br />
-                    <Button type="submit" fullWidth variant="contained" color="primary" className="submit" href={profile}>
+                    <Button type="submit" fullWidth variant="contained" color="primary" className="submit" component={Link} to={profile}>
                         Ingresar
                     </Button>
                     <Grid container spacing={4}>
