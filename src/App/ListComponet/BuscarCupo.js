@@ -15,7 +15,7 @@ export class BuscarCupo extends React.Component {
                   <CssBaseline />
                   <Grid item lg={12}>
                       <div className="ListTitle">
-                      Empieza tu viaje
+                      Encuentra un cupo
                       </div>
                   </Grid>
                   <Grid item lg={12}>

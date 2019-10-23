@@ -18,6 +18,7 @@ import {ProfileEdit} from './App/ProfileComponent/ProfileEdit';
 import HistorialRutas from './App/ProfileComponent/HistorialRutas';
 import {Promociones} from './App/ProfileComponent/Promociones';
 import {Soporte} from './App/ProfileComponent/Soporte';
+import {Reservar} from './App/ProfileComponent/Reservar';
 
 class App extends Component {
   constructor(props) {
@@ -44,6 +45,7 @@ class App extends Component {
           <Route path="/HistorialRutas" component={HistorialRutasView}/>
           <Route path="/Promociones" component={PromocionesView}/>
           <Route path="/Soporte" component={SoporteView}/>
+          <Route path="/Reservar" component={ReservarView}/>
         </div>
       </Router>
     );
@@ -139,4 +141,11 @@ const SoporteView = () => (
     <Soporte />
   </div>
 );
+
+const ReservarView = () => (
+  <div>
+    <Reservar />
+  </div>
+);
+
 export default App;
