@@ -1,67 +1,76 @@
 import React from 'react';
-import { Grid, CssBaseline, Button } from '@material-ui/core';
+import {Grid, CssBaseline, Button, Paper, Avatar, Typography} from '@material-ui/core';
 import './Profile.css';
 import {InputLabel, FormControl, Input } from '@material-ui/core';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import FaceRoundedIcon from "@material-ui/core/SvgIcon/SvgIcon";
+import Link_material from "@material-ui/core/Link/Link";
 
 const profile = '/Profile';
 
 
 export class ProfileEdit extends React.Component {;
-    render () {
+    render(){
         return (
             <React.Fragment>
-                <Grid container direction="column" className="ListBackground">
-                    <CssBaseline />
-                    <Grid item lg={12}>
-                        <div className="ListTitle">
-                            Datos Personales
-                        </div>
-                        <br/>
-                        <br/>
-                        <form className="form">
-                          <FormControl margin="normal" required fullWidth>
-                            Nombre:<Input id="nombre" name="nombre"/>
-                          </FormControl>
-                          <br />
-                          <FormControl margin="normal" required fullWidth>
-                            Apellido:<Input name="apellido"  id="apellido" />
-                          </FormControl>
-                          <br />
-                          <FormControl margin="normal" required fullWidth>
-                            Correo:<Input name="correo"  id="correo" type="email"/>
-                          </FormControl>
-                          <br />
-                          <FormControl margin="normal" required fullWidth>
-                            Contraseña:<Input name="contraseña"  id="contraseña" type="password"/>
-                          </FormControl>
-                          <br />
-                          <FormControl margin="normal" required fullWidth>
-                            Direccion:<Input name="direccion"  id="direccion" />
-                          </FormControl>
-                          <br />
-                          <FormControl margin="normal" required fullWidth>
-                            Pais:<Input name="pais"  id="pais" />
-                          </FormControl>
-                        </form>
-                        <br/>
+                <Grid container className="background">
+                    <Grid item xs={12} sm={12} md={6} elevation={6}>
+                        <CssBaseline />
+                        <main className="layout">
+                            <Paper className="paper">
+                                <Avatar className="avatar">
+                                    <FaceRoundedIcon />
+                                </Avatar>
+                                <Typography variant="headline">Perfil</Typography>
+                                <form className="form">
+                                    <FormControl margin="normal" required fullWidth >
+                                        <InputLabel htmlFor="email">Nombre</InputLabel>
+                                        <Input id="email" name="email" autoComplete="name" autoFocus />
+                                    </FormControl>
+                                    <br />
+                                    <FormControl margin="normal" required fullWidth>
+                                        <InputLabel htmlFor="email">Apellido</InputLabel>
+                                        <Input id="email" name="email" autoComplete="lastname" autoFocus />
+                                    </FormControl>
+                                    <br />
+                                    <FormControl margin="normal" required fullWidth>
+                                        <InputLabel htmlFor="email">Email</InputLabel>
+                                        <Input id="email" name="email" autoComplete="email" autoFocus />
+                                    </FormControl>
+                                    <br />
+                                    <FormControl margin="normal" required fullWidth>
+                                        <InputLabel>Dirección</InputLabel>
+                                        <Input id="dirección" name="dirección" autoFocus />
+                                    </FormControl>
+                                    <br />
+                                    <FormControl margin="normal" required fullWidth>
+                                        <InputLabel htmlFor="password">Contraseña</InputLabel>
+                                        <Input name="password" type="password" id="password" autoComplete="current-password" />
+                                    </FormControl>
+                                    <br />
+                                    <FormControl margin="normal" required fullWidth>
+                                        <InputLabel htmlFor="password">Confirmar Contraseña</InputLabel>
+                                        <Input name="password" type="password" id="password" autoComplete="current-password" />
+                                    </FormControl>
+                                    <br />
+                                    <Button type="submit" fullWidth variant="contained" color="primary" className="submit">
+                                        Actualizar
+                                    </Button>
+                                </form>
+                                <br />
 
-
-                        <Grid container>
-                            <Grid item md={5}>
-                            <Button type="submit" fullWidth variant="black" color="black" className="submit" href={profile}>
-                                Aceptar
-                            </Button>
-                            </Grid>
-                            <Grid item md={2}></Grid>
-                            <Grid item md={5}>
-                                <Button type="submit" fullWidth variant="black" className="black" href={profile}>
-                                    Atras
-                                </Button>
-                            </Grid>
-                        </Grid>
+                                <Grid container align="center">
+                                    <Grid item xs>
+                                        <Link_material component={Link} to="profile/">
+                                            Atrás
+                                        </Link_material>
+                                    </Grid>
+                                </Grid>
+                            </Paper>
+                        </main>
                     </Grid>
                 </Grid>
             </React.Fragment>
         );
-    };
+    }
 }

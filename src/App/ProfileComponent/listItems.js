@@ -22,7 +22,7 @@ const edit='/ProfileEdit'
 
 export const mainListItems = (
   <div>
-    <ListItem button component="a" component={Link} to="ProfileEdit">
+    <ListItem button component="a" component={Link} to="/ProfileEdit">
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
