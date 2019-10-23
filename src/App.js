@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Login }  from './App/LoginComponet/Login';
+import ForgotPassword  from './App/LoginComponet/Forgot-password';
 import { Register } from './App/RegisterComponent/Register';
 import './App.css';
 
@@ -30,7 +31,8 @@ class App extends Component {
         <div className="App">
           <Route exact path="/" component={LoginView}/>
           <Route path="/register" component={RegisterView}/>
-          <Route path="/parqueadero" component={RegistroParqueaderoView}/>
+        <Route path="/Forgot-password" component={ForgotPasswordView}/>
+        <Route path="/parqueadero" component={RegistroParqueaderoView}/>
           <Route path="/parqueadero2" component={RegistroParqueadero2View}/>
           <Route path="/listasParquederos" component={ListView}/>
           <Route path="/mapa" component={MapView}/>
@@ -59,6 +61,12 @@ const RegisterView = () => (
   <div>
     <Register />
   </div>
+);
+
+const ForgotPasswordView = () => (
+    <div>
+        <ForgotPassword />
+    </div>
 );
 const RegistroParqueaderoView = () => (
   <div>
