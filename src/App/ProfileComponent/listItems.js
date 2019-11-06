@@ -29,28 +29,28 @@ export const mainListItems = (
       <ListItemText primary="Editar Perfil" />
     </ListItem>
 
-    <ListItem button component="a" component={Link} to="HistorialRutas">
+    <ListItem button component="a" component={Link} to="/HistorialRutas">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Historial de Rutas" />
     </ListItem>
 
-    <ListItem button component="a" component={Link} to="Promociones">
+    <ListItem button component="a" component={Link} to="/Promociones">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Promociones" />
     </ListItem>
 
-    <ListItem button component="a" component={Link} to="BuscarCupo">
+    <ListItem button component="a" component={Link} to="/BuscarCupo">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Encuentra tu cupo" />
     </ListItem>
 
-    <ListItem button component="a" component={Link} to="mapa">
+    <ListItem button component="a" component={Link} to="/mapa">
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
@@ -61,7 +61,7 @@ export const mainListItems = (
 
 export const secondaryListItems = (
   <div>
-    <ListItem button component="a" component={Link} to="Soporte">
+    <ListItem button component="a" component={Link} to="/Soporte">
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>

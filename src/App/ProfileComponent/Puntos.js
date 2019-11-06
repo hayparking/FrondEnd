@@ -7,10 +7,8 @@ import Typography from '@material-ui/core/Typography';
 export default function Puntos() {
   return (
     <React.Fragment>
-      <Typography variant="h3">Puntos</Typography>
-      <Typography component="p" variant="h4">
-        100
-      </Typography>
+        <Typography component="p" variant="h3" style={{color: "green",  padding: "20% 0 0 0"}}>100</Typography>
+        <Typography variant="h4" style={{color: "#4CA35C"}}>Puntos</Typography>
     </React.Fragment>
   );
 }

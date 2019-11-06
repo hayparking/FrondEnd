@@ -17,3 +17,12 @@
     background-color: azure;
     border-radius: 15px;
 }
+
+.fab{
+    margin: 1px;
+    position: relative;
+    top: -100px;
+}
+.extendedIcon{
+    marginRight: 1px,
+}

@@ -12,17 +12,16 @@ export class List extends React.Component {
     render () {
         return (
             <React.Fragment>
-                <Grid container direction="column" className="ListBackground">
+                <Grid container direction="column" className="">
                     <CssBaseline />
-                    <Grid item lg={12}>
-                        <div className="ListTitle">
-                            Lista de Parqueaderos
-                        </div>
+                    <Grid item lg={8}>
+                        <h1>
+                            Elije tu parqueadero
+                        </h1>
                     </Grid>
                     <Grid item lg={12}>
-                        <Grid container>
-                            <Grid item sm={false} md={2}></Grid>
-                            <Grid item sm={12} md={8}>
+                        <Grid container style={{alignContent: "center"}}>
+                            <Grid item sm={12} md={5}>
                                 <Item Nombre="Parqueadero - Parque Simón Bolivar " Direccion="Cra. 59 #56-15 " Cupos=" 7" />
                                 <Item Nombre="PARQUEADERO PÚBLICO " Direccion="Cl. 93 #14-29 " Cupos=" 7" />
                                 <Item Nombre="Parqueadero Público Aparcar Ltda" Direccion="11, Cra. 13 #50 A " Cupos=" 7" />

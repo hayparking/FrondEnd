@@ -1,72 +1,61 @@
 import React from 'react';
-import { Grid, CssBaseline, Button, CardContent, Typography} from '@material-ui/core';
+import {Grid, CssBaseline, Button, CardContent, Typography, Card} from '@material-ui/core';
 import './Profile.css';
+import {Link} from "react-router-dom";
+import Exit from "@material-ui/core/SvgIcon/SvgIcon";
 
 
 const cupos = 'listasParquederos';
 const map='mapa';
+const profile ="profile"
 
 export class Reservar extends React.Component {
     render () {
         return (
             <React.Fragment>
-                <Grid container direction="column" className="ListBackground">
+                <Grid container direction="column">
                     <CssBaseline />
                     <Grid item lg={12}>
-                        <div className="ListTitle">
+                        <h1>
                           Reservar
-                        </div>
+                        </h1>
                     </Grid>
                     <Grid item lg={12}>
-                    <CardContent>
-                    <Typography variant="h5" component="h2">
-                      Confirme los datos antes de continuar
-                    </Typography>
-                    <br/><br/><br/>
-                      <Typography variant="h5" component="h2">
-                        Datos del Parqueadero
-                      </Typography>
-                      <Typography color="textSecondary" gutterBottom>
-                        Nombre parqueadero:Parqueadero Autolemus
-                        <br/>
-                        Direccion: Cl. 64 #11-31
-                        <br/>
-                        Cupos: 9
-                      </Typography>
-                      <br/><br/><br/><br/>
-                      <Typography variant="h5" component="h2">
-                        Datos del Usuario
-                      </Typography>
-                      <Typography color="textSecondary" gutterBottom>
-                        Tipo de Transporte: carro<br/>
-                        Placa: CVM668<br/>
-                        Punto partida:calle 180bis #16-92<br/>
-                        Punto Llegada:Cl. 64 #11-31<br/>
-                        Descripccion del medio de transporte: carro rojo marca chevrolet<br/>
-                        Tiempo Aroxdimado de uso:2 horas<br/>
-                      </Typography>
-                    </CardContent>
-                    <br/><br/><br/><br/><br/><br/><br/><br/>
-                        <Grid container>
-                            <Grid item sm={false} md={2}></Grid>
-                            <Grid item sm={12} md={8}>
-
-                            <Grid container>
-                                <Grid item md={5}>
-                                <Button type="submit" fullWidth variant="contained" color="black" className="submit" href={map}>
-                                    Aceptar
-                                </Button>
-                                </Grid>
-                                <Grid item md={2}></Grid>
-                                <Grid item md={5}>
-                                    <Button type="submit" fullWidth variant="contained" className="black" href={cupos}>
-                                        Cancelar
-                                    </Button>
-                                </Grid>
-                            </Grid>
-                            </Grid>
-                            <Grid item sm={false} md={2}></Grid>
-                        </Grid>
+                      <Card className="item" style={{position: "relative", width: '90%', marginLeft: "auto", marginRight: "auto"}}>
+                        <CardContent>
+                          <Typography color="textSecondary" gutterBottom>
+                            Datos del Parqueadero
+                          </Typography>
+                          <Typography variant="h5" component="h5">
+                            Parqueadero - Parque Simón Bolivar
+                          </Typography>
+                          <Typography variant="body1" component="p">
+                            Cra. 59 #56-15
+                          </Typography>
+                        </CardContent>
+                      </Card>
+                      <Card className="item" style={{position: "relative", width: '90%', marginLeft: "auto", marginRight: "auto"}}>
+                        <CardContent>
+                          <Typography color="textSecondary" gutterBottom>
+                            Datos del Usuario
+                          </Typography>
+                          <Typography variant="body1" component="p">
+                            <b>Tipo de Transporte:</b> Automovil <br/>
+                            <b>Placa:</b> CVM668 <br/>
+                            <b>Punto partida:</b> Calle 180bis #16-92 <br/>
+                            <b>Vehívulo:</b> Mazda 3 Rojo <br/>
+                            <b>Tiempo de uso (aprox.):</b> 2 horas <br/>
+                          </Typography>
+                        </CardContent>
+                      </Card>
+                      <div>
+                        <Button variant="contained" color="primary" component={Link} to={profile} style={{marginRight: '5px'}}>
+                          Reservar
+                        </Button>
+                        <Button variant="contained" component={Link} to={cupos}>
+                          Cancelar
+                        </Button>
+                      </div>
                     </Grid>
                 </Grid>
             </React.Fragment>
