@@ -3,8 +3,19 @@ import {Grid, CssBaseline, Button, CardContent, Typography, Card} from '@materia
 import './Profile.css';
 import {Link} from "react-router-dom";
 import Exit from "@material-ui/core/SvgIcon/SvgIcon";
+import axios from 'axios';
 
+export default {
+  // ...
+}
 
+axios.get("localhost")
+  .then(response => {
+    // Obtenemos los datos
+  })
+  .catch(e => {
+    // Capturamos los errores
+  })
 const cupos = 'listasParquederos';
 const map='mapa';
 const profile ="profile"

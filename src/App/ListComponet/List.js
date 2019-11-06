@@ -2,6 +2,7 @@ import React from 'react';
 import { Item } from './Item';
 import { Grid, CssBaseline, Button } from '@material-ui/core';
 import './List.css';
+import {Link} from "react-router-dom";
 
 const home = '/';
 const Register = '/parqueadero';
@@ -12,16 +13,16 @@ export class List extends React.Component {
     render () {
         return (
             <React.Fragment>
-                <Grid container direction="column" className="">
+                <Grid container direction="column">
                     <CssBaseline />
-                    <Grid item lg={8}>
+                    <Grid item lg={12}>
                         <h1>
                             Elije tu parqueadero
                         </h1>
                     </Grid>
                     <Grid item lg={12}>
-                        <Grid container style={{alignContent: "center"}}>
-                            <Grid item sm={12} md={5}>
+                        <div container style={{alignContent: "center"}}>
+                            <Grid item sm={12}>
                                 <Item Nombre="Parqueadero - Parque Simón Bolivar " Direccion="Cra. 59 #56-15 " Cupos=" 7" />
                                 <Item Nombre="PARQUEADERO PÚBLICO " Direccion="Cl. 93 #14-29 " Cupos=" 7" />
                                 <Item Nombre="Parqueadero Público Aparcar Ltda" Direccion="11, Cra. 13 #50 A " Cupos=" 7" />
@@ -43,24 +44,13 @@ export class List extends React.Component {
                                 <Item Nombre="Parqueadero J.S.L." Direccion="Cra. 7 #41-45 " Cupos=" 9" />
                                 <Item Nombre="     " Direccion="calle " Cupos=" 1" />
                                 <Item Nombre="     " Direccion="calle " Cupos=" 8" />
-                                <br />
-                                <br />
-                                <Grid container>
-                                    <Grid item md={5}>
-                                        <Button type="submit" fullWidth variant="contained" className="submit" href={buscarCupo}>
-                                            Atras
-                                        </Button>
-                                    </Grid>
-                                    <Grid item md={2}></Grid>
-                                    <Grid item md={5}>
-                                        <Button type="submit" fullWidth variant="contained" className="submit" href={map}>
-                                            Aceptar
-                                        </Button>
-                                    </Grid>
-                                </Grid>
+                                <div>
+                                  <Button variant="contained" color="secondary"  component={Link} to="/" style={{marginRight: "auto", marginLeft: "auto"}}>
+                                    Atras
+                                  </Button>
+                                </div>
                             </Grid>
-                            <Grid item sm={false} md={2}></Grid>
-                        </Grid>
+                        </div>
                     </Grid>
                 </Grid>
             </React.Fragment>
